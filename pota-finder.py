@@ -97,7 +97,7 @@ class ParkObj:
 ## Read in CSV
 # CSV FORMAT: reference,name,latitude,longitude,grid,locationDesc,attempts,activations,qsos,my_activations,my_hunted_qsos
 park_list = []
-with open(potafile, newline='') as csvfile:
+with open(potafile, newline='',encoding='utf-8') as csvfile:
     potalist = csv.reader(csvfile)
     for park in potalist:
         if "reference" not in park:
